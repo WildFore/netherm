@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nether Calculator</title>
+</head>
+<body>
+    <header class="headf">
+        <h1 class = "title">Nether Calculator by</h1>
+            <button class="name" id = "me">WildFore</button>
+        </h1>
+    </header>
+    <div class = "Window">
+        <li class="list">
+            <ul class = "xxx"><input class = "x" id = "xIn" maxlength="24"><div class = "xunder">X</div></input></ul>
+            <ul><input class = "y" id = "yIn" maxlength="24"><div class = "yunder">Y</div></input></ul>
+            <ul class = "zzz"><input class = "z" id = "zIn" maxlength="24"><div class = "zunder">Z</div></input></ul>
+        </li>      
+        <button class = "Submit", id = "submit">CALCULATE</button>  
+        <button class = "Ask", id = "ask">?</button>  
+    </div>
+    <script>
+        document.getElementById("submit").onclick = function()
+        {
+            var x = document.getElementById("xIn").value;
+            var y = document.getElementById("yIn").value;
+            var z = document.getElementById("zIn").value;
+            var xRes = x / 8;
+            var yRes = y / 8;
+            var zRes = z / 8; 
+            var resultVar = Math.round(xRes).toString() + " " +  Math.round(yRes).toString() + " " + Math.round(zRes).toString();
+            navigator.clipboard.writeText(resultVar);
+            alert("Copied to Clipboard");
+            if (x == 24 && y == "02" & z == 2022)
+            {
+                alert("Save Ukraine ❤️‍🩹🇺🇦");
+            }
+        }
+        document.getElementById("ask").onclick = function()
+        {
+            alert("This calculator simply gives you nether coordinates to build a portal to come out on exact coordinates you type in.");
+        }
+        document.getElementById("me").onclick = function()
+        {
+            alert("Discord: bettercallsanya#0650");
+        }
+    </script>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+    body 
+    {
+        background-color: rgb(44, 44, 44);
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        margin: 0px 0px 0px 0px;
+    }
+    .headf 
+    {
+        background-color: rgb(31, 31, 31);
+        height: 4.4em;
+    }
+    .title 
+    {
+        margin-top: 0px;
+        padding-top: 5px;
+        margin-left: 10px;
+        font-size: 20px;
+        margin-bottom: 0px;
+
+    }
+    .Window 
+    {
+        flex-direction: column-reverse;
+        margin-top: 11vw;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+    .list 
+    {
+        width: 16em;
+        position: absolute;
+        left:-1.7em;
+        list-style: none;
+        font-size: 26px;
+        margin-left: 8px;
+    }
+    .x, .y, .z
+    {
+        left: -0.7em;
+        margin-top: -20px;
+        margin-left: 10px;
+        padding: 0.2em;
+        border-radius: 0.6em;
+        position: relative;
+        top:-3px;
+        width: 15.7em;
+        border: none;
+        outline: none;
+        font-family: 'Poppins', sans-serif;
+        transition: box-shadow 0.5s;
+        font-size: 20px;
+        height: 2em;
+        padding-left: 0.5em;
+        color: rgb(44, 44, 44);
+        padding-left: 2.5em;
+    }
+    .xx, .yy, .zz 
+    {
+        position: relative;
+        top:100px;
+    }
+    ul 
+    {
+        margin: 0.4em;
+        position: relative;
+        color: rgb(255, 255, 255);
+    }
+    .Submit 
+    {
+        position: relative;
+        top:4.1em;
+        left: 2.3em;
+        width: 16.6em;
+        height: 2.5em;
+        border-radius: 0em 0.6em 0.6em 0em;
+        border: none;
+        font-family: 'Poppins', sans-serif;
+        background-color: rgb(44, 44, 44);
+        transition: box-shadow 0.5s, background-color 0.5s, color 0.5s, border 0.5s;
+        font-size: 20px;
+        color: white;
+        border: 1px solid white;
+    }
+    .Submit:hover
+    {
+        box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.548);
+        background-color: rgb(252, 213, 40);
+        border: none;
+        color: rgb(44, 44, 44);
+    }
+    .x:focus, .y:focus, .z:focus
+    {
+        box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.548);
+    }
+    .x:hover, .y:hover, .z:hover
+    {
+        box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.548);
+    }
+    .name
+    {
+        color: rgb(252, 213, 40);
+        margin-left: 10px;
+        font-size: 20px;
+        padding-top: -10px;
+        background-color: rgba(0, 0, 0, 0);
+        border:none;
+        font-family: 'Poppins', sans-serif;
+        padding: 0px;
+    }
+    .xunder 
+    {
+        padding-top: 0.16em;
+        padding-bottom: 0.17em;
+        background-color: rgb(221, 87, 46);
+        position: absolute;
+        width: 1.5em;
+        top:-0.2em;
+        z-index: 1;
+        border-radius: 0.5em 0em 0em 0.5em;
+        left:1.3em;
+    }
+    .yunder 
+    {
+        background-color: rgb(48, 180, 98);
+        padding-top: 0.17em;
+        padding-bottom: 0.17em;
+        position: absolute;
+        width: 1.5em;
+        top:-0.22em;
+        z-index: 1;
+        border-radius: 0.5em 0em 0em 0.5em;
+        left:1.3em;
+    }
+    .zunder 
+    {
+        background-color: rgb(47, 77, 177);
+        padding-top: 0.17em;
+        padding-bottom: 0.17em;
+        position: absolute;
+        width: 1.5em;
+        top:-0.24em;
+        z-index: 1;
+        border-radius: 0.5em 0em 0em 0.5em;
+        left:1.3em;
+    }
+    .Ask
+    {
+        position: relative;
+        top:6.6em;
+        left: 2em;
+        width: 1.9em;
+        height: 2.5em;
+        border-radius: 0.6em 0em 0em 0.6em;
+        border: none;
+        font-family: 'Poppins', sans-serif;
+        background-color: rgb(252, 213, 40);
+        transition: box-shadow 0.5s, background-color 0.5s;
+        font-size: 20px;
+        color: rgb(44, 44, 44);
+        transition: background-color 0.5s, box-shadow 0.5s, color 0.5s;
+        left:0.5em;
+    }
+    .Ask:hover 
+    {
+        background-color: rgb(0, 140, 255);
+        box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.548);
+        color: white;
+    }
+    </style>    
+</body>
+</html>
